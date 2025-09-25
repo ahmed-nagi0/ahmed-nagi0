@@ -1,142 +1,346 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ahmed Nagi — Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --primary: #2563eb;
-      --secondary: #1e293b;
-      --bg: #f8fafc;
-      --text: #0f172a;
-      --muted: #475569;
-      --card: #ffffff;
-      --radius: 12px;
-    }
-    * { box-sizing: border-box; margin:0; padding:0; }
-    body { font-family: 'Poppins', sans-serif; background: var(--bg); color: var(--text); line-height:1.6; }
-    a { color: inherit; text-decoration:none; }
-    img { max-width:100%; display:block; border-radius: var(--radius); }
-    header { background: var(--card); box-shadow:0 2px 6px rgba(0,0,0,0.05); position:sticky; top:0; z-index:100; }
-    .nav { max-width:1100px; margin:auto; display:flex; justify-content:space-between; align-items:center; padding:16px 20px; }
-    .brand { font-weight:700; font-size:20px; color: var(--primary); }
-    nav a { margin-left:20px; font-weight:500; color:var(--muted); }
-    nav a:hover { color: var(--primary); }
-    .hero { max-width:1100px; margin:60px auto; display:grid; grid-template-columns:1fr 1fr; gap:40px; align-items:center; padding:0 20px; }
-    .hero h1 { font-size:42px; line-height:1.2; margin-bottom:20px; }
-    .hero p { color: var(--muted); margin-bottom:20px; }
-    .hero .buttons a { display:inline-block; margin-right:12px; padding:12px 20px; border-radius:var(--radius); font-weight:600; }
-    .btn-primary { background: var(--primary); color:white; }
-    .btn-outline { border:2px solid var(--primary); color: var(--primary); }
-    section { max-width:1100px; margin:60px auto; padding:0 20px; }
-    h2 { font-size:28px; margin-bottom:20px; position:relative; }
-    h2::after { content:''; width:50px; height:3px; background:var(--primary); position:absolute; bottom:-6px; left:0; border-radius:2px; }
-    .card { background:var(--card); border-radius:var(--radius); padding:20px; box-shadow:0 2px 8px rgba(0,0,0,0.05); }
-    .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(280px,1fr)); gap:20px; }
-    .skills span { display:inline-block; background:#e2e8f0; color:#1e293b; padding:6px 12px; border-radius:var(--radius); font-size:14px; margin:4px; }
-    form textarea { width:100%; padding:12px; border-radius:var(--radius); border:1px solid #cbd5e1; resize:none; font-family:inherit; }
-    form button { margin-top:10px; padding:12px 20px; border:none; border-radius:var(--radius); background:var(--primary); color:white; font-weight:600; cursor:pointer; }
-    footer { text-align:center; padding:30px 20px; color:var(--muted); font-size:14px; }
-    @media(max-width:768px){ .hero{grid-template-columns:1fr;text-align:center;} .hero img{margin:auto;} nav a{margin:0 10px;} }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahmed Nagi - Cybersecurity & Network Engineering</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <div class="nav">
-      <div class="brand">Ahmed Nagi</div>
-      <nav>
-        <a href="#about">About</a>
-        <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="#home">Ahmed Nagi</a>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
 
-  <section class="hero">
-    <div>
-      <h1>Hello, I’m Ahmed Nagi<br><span style="color:var(--primary)">Network Security Engineer</span></h1>
-      <p>Student at the Faculty of Electronic Engineering, Menoufia University. Passionate about network security, vulnerability assessments, and secure system design.</p>
-      <div class="buttons">
-        <a class="btn-primary" href="mailto:ahmednagi536@gmail.com">Contact Me</a>
-        <a class="btn-outline" href="#projects">See Projects</a>
-      </div>
-    </div>
-    <div>
-      <img src="https://via.placeholder.com/450x350.png?text=Your+Photo" alt="Ahmed Nagi">
-    </div>
-  </section>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Ahmed Nagi</h1>
+                    <h2>Cybersecurity & Network Engineering Student</h2>
+                    <p>Passionate about network security and infrastructure protection. Specializing in vulnerability assessment, network hardening, and security operations.</p>
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn-primary">Get In Touch</a>
+                        <a href="#projects" class="btn-secondary">View Projects</a>
+                    </div>
+                    <div class="hero-social">
+                        <a href="mailto:ahmednagi536@gmail.com"><i class="fas fa-envelope"></i></a>
+                        <a href="https://linkedin.com/in/ahmed-nagi" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="tel:+201099573960"><i class="fas fa-phone"></i></a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="image-container">
+                        <img src="profile-image.jpg" alt="Ahmed Nagi" class="profile-img">
+                        <div class="image-overlay"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <div class="card">
-      <p>I am an Electronics & Communications student with strong interest in computer networks and security. Skilled in designing topologies, vulnerability scanning, IDS configuration, and SIEM workflows. I aim to build secure, efficient systems.</p>
-    </div>
-  </section>
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>I'm a dedicated Electronics and Communications Engineering student at Menoufia University with a strong passion for cybersecurity and network infrastructure. My journey in technology is driven by curiosity and a commitment to securing digital environments.</p>
+                    
+                    <p>Currently pursuing my Bachelor's degree (expected June 2026), I've gained hands-on experience through practical projects, internships, and continuous learning. My expertise spans network security, vulnerability assessment, and security operations.</p>
+                    
+                    <div class="about-stats">
+                        <div class="stat">
+                            <h3>90%</h3>
+                            <p>Risk Reduction Achieved</p>
+                        </div>
+                        <div class="stat">
+                            <h3>85%</h3>
+                            <p>False Positive Reduction</p>
+                        </div>
+                        <div class="stat">
+                            <h3>3+</h3>
+                            <p>Years of Study</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="about-img-container">
+                        <i class="fas fa-shield-alt security-icon"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <section id="experience">
-    <h2>Experience</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Cybersecurity Trainee — ITI Virtual Internship</h3>
-        <p>Hands-on training in scanning, firewall configuration, SIEM basics, and solving Capture The Flag challenges.</p>
-      </div>
-      <div class="card">
-        <h3>Home Network Security Audit</h3>
-        <p>Performed a vulnerability assessment using Nmap, deployed Snort IDS, and hardened Wi-Fi & firewall rules.</p>
-      </div>
-      <div class="card">
-        <h3>Network Lab Projects</h3>
-        <p>Designed Cisco Packet Tracer topologies, configured routers/switches, routing, VLANs, NAT, and DHCP.</p>
-      </div>
-    </div>
-  </section>
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Skills & Technologies</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <div class="category-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h3>Networking</h3>
+                    <ul>
+                        <li>TCP/IP & OSI Model</li>
+                        <li>VLAN & VPN Configuration</li>
+                        <li>Firewall Configuration</li>
+                        <li>Network Protocols</li>
+                        <li>Router/Switch Configuration</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <div class="category-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Security Tools</h3>
+                    <ul>
+                        <li>Nmap & Wireshark</li>
+                        <li>Snort IDS</li>
+                        <li>Kali Linux</li>
+                        <li>Metasploit</li>
+                        <li>pfSense</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <div class="category-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Programming</h3>
+                    <ul>
+                        <li>Python</li>
+                        <li>MATLAB</li>
+                        <li>Linux Shell Scripting</li>
+                        <li>Automation Scripts</li>
+                        <li>Security Analysis</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <div class="category-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <h3>Cryptography</h3>
+                    <ul>
+                        <li>AES (CBC, OFB, CTR)</li>
+                        <li>RSA Encryption</li>
+                        <li>ECC</li>
+                        <li>Hash Functions</li>
+                        <li>Digital Signatures</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Home Network Audit</h3>
-        <p>Full assessment with Nmap + Snort rules to mitigate unauthorized access.</p>
-      </div>
-      <div class="card">
-        <h3>Packet Tracer Labs</h3>
-        <p>Topologies demonstrating routing, VLANs, NAT, and simulated attacks with mitigation exercises.</p>
-      </div>
-      <div class="card">
-        <h3>CTF Challenges</h3>
-        <p>Scripts and writeups from Capture The Flag exercises in Python and shell scripting.</p>
-      </div>
-    </div>
-  </section>
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Home Network Security Audit</h3>
+                    <p>Comprehensive vulnerability assessment and hardening of home network infrastructure using advanced security tools and techniques.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Nmap</span>
+                        <span class="tech-tag">Snort</span>
+                        <span class="tech-tag">Linux</span>
+                        <span class="tech-tag">WPA3</span>
+                    </div>
+                    <div class="project-achievements">
+                        <div class="achievement">
+                            <i class="fas fa-check-circle"></i>
+                            <span>90% unauthorized access risk reduction</span>
+                        </div>
+                        <div class="achievement">
+                            <i class="fas fa-check-circle"></i>
+                            <span>85% false positive reduction</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-sitemap"></i>
+                    </div>
+                    <h3>Network Lab Projects</h3>
+                    <p>Built multiple network topologies using Cisco Packet Tracer, implementing various routing protocols and security configurations.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Cisco Packet Tracer</span>
+                        <span class="tech-tag">DHCP</span>
+                        <span class="tech-tag">NAT</span>
+                        <span class="tech-tag">Routing</span>
+                    </div>
+                    <div class="project-achievements">
+                        <div class="achievement">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Static/Dynamic routing implementation</span>
+                        </div>
+                        <div class="achievement">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Security attack simulation</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>Threat Detection System</h3>
+                    <p>Deployed Snort IDS on Linux server to monitor network traffic and detect various security threats with custom rule configurations.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Snort</span>
+                        <span class="tech-tag">Linux Server</span>
+                        <span class="tech-tag">Custom Rules</span>
+                        <span class="tech-tag">Traffic Analysis</span>
+                    </div>
+                    <div class="project-achievements">
+                        <div class="achievement">
+                            <i class="fas fa-check-circle"></i>
+                            <span>SQL injection detection</span>
+                        </div>
+                        <div class="achievement">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Port scanning identification</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <section id="skills">
-    <h2>Skills</h2>
-    <div class="card skills">
-      <span>TCP/IP</span><span>VLAN</span><span>VPN</span><span>Firewall Config</span>
-      <span>Nmap</span><span>Wireshark</span><span>Snort</span><span>Python</span>
-    </div>
-  </section>
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2 class="section-title">Experience & Education</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">2024</div>
+                    <div class="timeline-content">
+                        <h3>Cybersecurity Trainee</h3>
+                        <h4>ITI Virtual Internship</h4>
+                        <p>Gained hands-on experience in network scanning, vulnerability assessment, and SIEM tools. Participated in CTF challenges and learned firewall configuration fundamentals.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">2023-2024</div>
+                    <div class="timeline-content">
+                        <h3>Network Lab Projects</h3>
+                        <h4>Faculty Labs - Student Practice</h4>
+                        <p>Built multiple network topologies, configured routers and switches, implemented routing protocols, and conducted security assessments.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">2021-2026</div>
+                    <div class="timeline-content">
+                        <h3>Bachelor of Science</h3>
+                        <h4>Electronics & Communications Engineering</h4>
+                        <p>Menoufia University - Expected graduation June 2026. Specializing in network engineering and cybersecurity fundamentals.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <div class="card">
-      <p>I’m open to internships, collaborations, and junior security roles. Send me a message:</p>
-      <form onsubmit="event.preventDefault(); window.location.href='mailto:ahmednagi536@gmail.com?subject=Portfolio%20Contact&body='+encodeURIComponent(document.getElementById('msg').value)">
-        <textarea id="msg" rows="5" placeholder="Your message"></textarea>
-        <button type="submit">Send Email</button>
-      </form>
-    </div>
-  </section>
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Let's Connect</h3>
+                    <p>I'm always interested in discussing cybersecurity opportunities, networking projects, or potential collaborations.</p>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>ahmednagi536@gmail.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>(+20) 109 957 3960</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Location</h4>
+                            <p>Luxor, Egypt</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <form>
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Your Message" rows="6" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <footer>
-    © <span id="year"></span> Ahmed Nagi — All Rights Reserved
-  </footer>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2024 Ahmed Nagi. All rights reserved.</p>
+                <div class="footer-social">
+                    <a href="mailto:ahmednagi536@gmail.com"><i class="fas fa-envelope"></i></a>
+                    <a href="https://linkedin.com/in/ahmed-nagi" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="tel:+201099573960"><i class="fas fa-phone"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+    <script src="script.js"></script>
 </body>
 </html>
