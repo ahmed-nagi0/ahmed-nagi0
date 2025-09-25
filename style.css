@@ -796,3 +796,16 @@ section {
         text-align: center;
     }
 }
+.skill-bar-container {
+  background: #e2e8f0;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-top: 8px;
+  height: 8px;
+}
+.skill-bar {
+  height: 8px;
+  background: #2563eb;
+  width: 0;
+  transition: width 1s ease-in-out;
+}
