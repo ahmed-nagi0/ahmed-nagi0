@@ -3,198 +3,140 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ahmed Nagi — Network Security Engineer</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <title>Ahmed Nagi — Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    :root{
-      --bg:#0f1724; --card:#0b1220; --muted:#94a3b8; --accent:#7c3aed; --glass: rgba(255,255,255,0.04);
-      --max-width:1100px; font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    :root {
+      --primary: #2563eb;
+      --secondary: #1e293b;
+      --bg: #f8fafc;
+      --text: #0f172a;
+      --muted: #475569;
+      --card: #ffffff;
+      --radius: 12px;
     }
-    *{box-sizing:border-box}
-    html,body{height:100%; margin:0; background:linear-gradient(180deg,#071028 0%, #081226 60%); color:#e6eef8}
-    a{color:inherit}
-    .container{max-width:var(--max-width); margin:36px auto; padding:28px}
-    header{display:flex; align-items:center; justify-content:space-between; gap:16px}
-    .brand{display:flex; gap:14px; align-items:center}
-    .avatar{width:64px; height:64px; border-radius:12px; background:linear-gradient(135deg,var(--accent),#3b82f6); display:flex; align-items:center; justify-content:center; font-weight:800; font-size:20px}
-    nav{display:flex; gap:12px; align-items:center}
-    nav a{padding:8px 12px; border-radius:8px; color:var(--muted); text-decoration:none}
-    nav a.primary{background:var(--glass); color:#fff}
-    .hero{display:grid; grid-template-columns:1fr 360px; gap:28px; align-items:center; margin-top:28px}
-    .hero-left h1{margin:0;font-size:36px;line-height:1.02}
-    .role{color:var(--accent); font-weight:700}
-    .tags{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
-    .tag{background:rgba(255,255,255,0.03); padding:8px 10px;border-radius:8px;color:var(--muted);font-size:13px}
-    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border-radius:14px; padding:18px}
-    .contact-card{padding:18px;text-align:center}
-    .btn{display:inline-block;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:600}
-    .btn-primary{background:var(--accent); color:white}
-    .btn-ghost{border:1px solid rgba(255,255,255,0.06); color:var(--muted)}
-    section{margin-top:26px}
-    .grid-2{display:grid;grid-template-columns:1fr 360px;gap:22px}
-    .list{display:flex;flex-direction:column;gap:12px}
-    .item h3{margin:0;font-size:16px}
-    .meta{color:var(--muted); font-size:13px}
-    .skills{display:flex;flex-wrap:wrap;gap:10px}
-    .skill{background:rgba(255,255,255,0.03); padding:8px 10px; border-radius:8px; font-weight:600}
-    footer{margin-top:40px; color:var(--muted); font-size:14px; text-align:center}
-    /* responsive */
-    @media (max-width:900px){
-      .hero, .grid-2{grid-template-columns:1fr;}
-      .hero-right, .card{width:auto}
-      .avatar{width:56px;height:56px}
-    }
+    * { box-sizing: border-box; margin:0; padding:0; }
+    body { font-family: 'Poppins', sans-serif; background: var(--bg); color: var(--text); line-height:1.6; }
+    a { color: inherit; text-decoration:none; }
+    img { max-width:100%; display:block; border-radius: var(--radius); }
+    header { background: var(--card); box-shadow:0 2px 6px rgba(0,0,0,0.05); position:sticky; top:0; z-index:100; }
+    .nav { max-width:1100px; margin:auto; display:flex; justify-content:space-between; align-items:center; padding:16px 20px; }
+    .brand { font-weight:700; font-size:20px; color: var(--primary); }
+    nav a { margin-left:20px; font-weight:500; color:var(--muted); }
+    nav a:hover { color: var(--primary); }
+    .hero { max-width:1100px; margin:60px auto; display:grid; grid-template-columns:1fr 1fr; gap:40px; align-items:center; padding:0 20px; }
+    .hero h1 { font-size:42px; line-height:1.2; margin-bottom:20px; }
+    .hero p { color: var(--muted); margin-bottom:20px; }
+    .hero .buttons a { display:inline-block; margin-right:12px; padding:12px 20px; border-radius:var(--radius); font-weight:600; }
+    .btn-primary { background: var(--primary); color:white; }
+    .btn-outline { border:2px solid var(--primary); color: var(--primary); }
+    section { max-width:1100px; margin:60px auto; padding:0 20px; }
+    h2 { font-size:28px; margin-bottom:20px; position:relative; }
+    h2::after { content:''; width:50px; height:3px; background:var(--primary); position:absolute; bottom:-6px; left:0; border-radius:2px; }
+    .card { background:var(--card); border-radius:var(--radius); padding:20px; box-shadow:0 2px 8px rgba(0,0,0,0.05); }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(280px,1fr)); gap:20px; }
+    .skills span { display:inline-block; background:#e2e8f0; color:#1e293b; padding:6px 12px; border-radius:var(--radius); font-size:14px; margin:4px; }
+    form textarea { width:100%; padding:12px; border-radius:var(--radius); border:1px solid #cbd5e1; resize:none; font-family:inherit; }
+    form button { margin-top:10px; padding:12px 20px; border:none; border-radius:var(--radius); background:var(--primary); color:white; font-weight:600; cursor:pointer; }
+    footer { text-align:center; padding:30px 20px; color:var(--muted); font-size:14px; }
+    @media(max-width:768px){ .hero{grid-template-columns:1fr;text-align:center;} .hero img{margin:auto;} nav a{margin:0 10px;} }
   </style>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <div class="brand">
-        <div class="avatar">AN</div>
-        <div>
-          <div style="font-weight:800">Ahmed Nagi</div>
-          <div style="font-size:13px;color:var(--muted)">Network Security Engineer — Electronics & Communications Student</div>
-        </div>
-      </div>
+  <header>
+    <div class="nav">
+      <div class="brand">Ahmed Nagi</div>
       <nav>
         <a href="#about">About</a>
         <a href="#experience">Experience</a>
         <a href="#projects">Projects</a>
-        <a href="#contact" class="primary">Contact</a>
+        <a href="#contact">Contact</a>
       </nav>
-    </header>
+    </div>
+  </header>
 
-    <main>
-      <section class="hero">
-        <div class="hero-left">
-          <h1>Hi, I’m <span style="color:var(--accent)">Ahmed Nagi</span><br><span class="role">Network Security Engineer</span></h1>
-          <p style="color:var(--muted); margin-top:14px; font-size:15px">Student at the Faculty of Electronic Engineering (Menoufia University). I build secure network topologies, run assessments, and harden systems. I love turning complex problems into simple, secure designs.</p>
+  <section class="hero">
+    <div>
+      <h1>Hello, I’m Ahmed Nagi<br><span style="color:var(--primary)">Network Security Engineer</span></h1>
+      <p>Student at the Faculty of Electronic Engineering, Menoufia University. Passionate about network security, vulnerability assessments, and secure system design.</p>
+      <div class="buttons">
+        <a class="btn-primary" href="mailto:ahmednagi536@gmail.com">Contact Me</a>
+        <a class="btn-outline" href="#projects">See Projects</a>
+      </div>
+    </div>
+    <div>
+      <img src="https://via.placeholder.com/450x350.png?text=Your+Photo" alt="Ahmed Nagi">
+    </div>
+  </section>
 
-          <div class="tags">
-            <div class="tag">Nmap</div>
-            <div class="tag">Snort</div>
-            <div class="tag">Wireshark</div>
-            <div class="tag">Python</div>
-            <div class="tag">Kali Linux</div>
-          </div>
+  <section id="about">
+    <h2>About Me</h2>
+    <div class="card">
+      <p>I am an Electronics & Communications student with strong interest in computer networks and security. Skilled in designing topologies, vulnerability scanning, IDS configuration, and SIEM workflows. I aim to build secure, efficient systems.</p>
+    </div>
+  </section>
 
-          <div style="margin-top:18px;display:flex;gap:12px">
-            <a class="btn btn-primary" href="mailto:ahmednagi536@gmail.com">Contact Me</a>
-            <a class="btn btn-ghost" href="#projects">See Projects</a>
-            <a class="btn" style="background:transparent;color:var(--muted);border:1px solid rgba(255,255,255,0.04);" href="#cv">Download CV</a>
-          </div>
-        </div>
+  <section id="experience">
+    <h2>Experience</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Cybersecurity Trainee — ITI Virtual Internship</h3>
+        <p>Hands-on training in scanning, firewall configuration, SIEM basics, and solving Capture The Flag challenges.</p>
+      </div>
+      <div class="card">
+        <h3>Home Network Security Audit</h3>
+        <p>Performed a vulnerability assessment using Nmap, deployed Snort IDS, and hardened Wi-Fi & firewall rules.</p>
+      </div>
+      <div class="card">
+        <h3>Network Lab Projects</h3>
+        <p>Designed Cisco Packet Tracer topologies, configured routers/switches, routing, VLANs, NAT, and DHCP.</p>
+      </div>
+    </div>
+  </section>
 
-        <aside class="hero-right card contact-card">
-          <h3 style="margin-top:0">Contact</h3>
-          <p class="meta">Luxor, Egypt</p>
-          <p style="margin:12px 0;font-weight:700">(+20) 1099573960</p>
-          <p style="margin:6px 0;color:var(--muted)">ahmednagi536@gmail.com</p>
-          <div style="margin-top:12px;display:flex;gap:8px;justify-content:center;flex-wrap:wrap">
-            <a class="btn btn-ghost" href="mailto:ahmednagi536@gmail.com">Email</a>
-            <a class="btn" href="https://www.linkedin.com/in/ahmed-nagi" target="_blank">LinkedIn</a>
-          </div>
-        </aside>
-      </section>
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Home Network Audit</h3>
+        <p>Full assessment with Nmap + Snort rules to mitigate unauthorized access.</p>
+      </div>
+      <div class="card">
+        <h3>Packet Tracer Labs</h3>
+        <p>Topologies demonstrating routing, VLANs, NAT, and simulated attacks with mitigation exercises.</p>
+      </div>
+      <div class="card">
+        <h3>CTF Challenges</h3>
+        <p>Scripts and writeups from Capture The Flag exercises in Python and shell scripting.</p>
+      </div>
+    </div>
+  </section>
 
-      <section id="about" class="card">
-        <h2 style="margin:0 0 8px 0">About me</h2>
-        <p style="color:var(--muted); margin:0">Student at the Faculty of Electronic Engineering — Electronics & Communications. Strong interest in computer networks and network security. Experienced with network topology design, vulnerability scanning, IDS configuration and basic SIEM workflows.</p>
-      </section>
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="card skills">
+      <span>TCP/IP</span><span>VLAN</span><span>VPN</span><span>Firewall Config</span>
+      <span>Nmap</span><span>Wireshark</span><span>Snort</span><span>Python</span>
+    </div>
+  </section>
 
-      <section id="experience" class="grid-2">
-        <div>
-          <h2 style="margin-bottom:6px">Experience</h2>
-          <div class="list">
-            <div class="item card">
-              <h3>Home Network Security Audit & Hardening <span class="meta">(Personal Project — Sep 2024)</span></h3>
-              <p class="meta">Conducted a vulnerability assessment using Nmap, deployed Snort, implemented WPA3, and implemented firewall rules. Reduced unauthorized access risks by 90% and reduced false positives by 85% through tuned rules.</p>
-            </div>
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="card">
+      <p>I’m open to internships, collaborations, and junior security roles. Send me a message:</p>
+      <form onsubmit="event.preventDefault(); window.location.href='mailto:ahmednagi536@gmail.com?subject=Portfolio%20Contact&body='+encodeURIComponent(document.getElementById('msg').value)">
+        <textarea id="msg" rows="5" placeholder="Your message"></textarea>
+        <button type="submit">Send Email</button>
+      </form>
+    </div>
+  </section>
 
-            <div class="item card">
-              <h3>Cybersecurity Trainee — ITI Virtual Internship <span class="meta">(Summer 2024)</span></h3>
-              <p class="meta">Hands-on work with network scanning, vulnerability assessment, SIEM basics, firewall configuration, and CTF participation to improve problem solving.</p>
-            </div>
-
-            <div class="item card">
-              <h3>Network Lab Projects — Faculty Labs <span class="meta">(2023–2024)</span></h3>
-              <p class="meta">Built topologies with Cisco Packet Tracer, configured routers/switches, routing, NAT, DHCP and practiced simulated attacks and mitigation.</p>
-            </div>
-          </div>
-        </div>
-
-        <aside>
-          <div class="card">
-            <h3 style="margin-top:0">Skills</h3>
-            <div class="skills" style="margin-top:10px">
-              <div class="skill">TCP/IP</div>
-              <div class="skill">VLAN</div>
-              <div class="skill">VPN</div>
-              <div class="skill">Firewall Config</div>
-              <div class="skill">Nmap</div>
-              <div class="skill">Wireshark</div>
-              <div class="skill">Snort</div>
-              <div class="skill">Python</div>
-            </div>
-
-            <h4 style="margin-top:14px">Languages</h4>
-            <p class="meta">Arabic (Native) — English (Intermediate)</p>
-
-            <h4 style="margin-top:12px">Education</h4>
-            <p class="meta">B.Sc. Electronics & Communications — Menoufia University (Expected June 2026)</p>
-          </div>
-        </aside>
-      </section>
-
-      <section id="projects">
-        <h2>Projects</h2>
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:12px">
-          <div class="card">
-            <h3 style="margin-top:0">Home Network Audit & Snort Deployment</h3>
-            <p class="meta">Assessment using Nmap, custom Snort rules, firewall hardening and WPA3 deployment. Includes reporting and mitigation steps.</p>
-            <div style="margin-top:10px"><a class="btn btn-primary" href="#" onclick="alert('Project details can be added here or linked to a repo')">Details</a></div>
-          </div>
-
-          <div class="card">
-            <h3 style="margin-top:0">Packet Tracer Topologies</h3>
-            <p class="meta">Multiple lab topologies demonstrating routing, VLANs, NAT and simulated attacks with mitigation exercises.</p>
-            <div style="margin-top:10px"><a class="btn btn-primary" href="#">View Files</a></div>
-          </div>
-
-          <div class="card">
-            <h3 style="margin-top:0">CTF Challenges & Scripts</h3>
-            <p class="meta">Scripts and writeups from Capture The Flag exercises and automation scripts in Python and shell.</p>
-            <div style="margin-top:10px"><a class="btn btn-primary" href="#">View Writeups</a></div>
-          </div>
-        </div>
-      </section>
-
-      <section id="cv" class="card">
-        <h2>Curriculum Vitae</h2>
-        <p class="meta">Download a PDF version of my CV for details, full experience and certifications.</p>
-        <div style="margin-top:12px"><a class="btn btn-ghost" href="#">Download CV (PDF)</a></div>
-      </section>
-
-      <section id="contact" class="card">
-        <h2>Contact</h2>
-        <p class="meta">I’m open to internships, collaboration, and junior network security roles. Send me a message and I’ll reply as soon as I can.</p>
-
-        <form onsubmit="event.preventDefault(); window.location.href='mailto:ahmednagi536@gmail.com?subject=Portfolio%20Contact&body='+encodeURIComponent(document.getElementById('message').value)"> 
-          <label style="display:block;margin-top:12px">Message</label>
-          <textarea id="message" rows="5" style="width:100%;padding:10px;border-radius:8px;background:transparent;border:1px solid rgba(255,255,255,0.04);color:inherit"></textarea>
-          <div style="margin-top:10px"><button class="btn btn-primary" type="submit">Send Email</button></div>
-        </form>
-      </section>
-
-      <footer>
-        © <span id="year"></span> Ahmed Nagi — Built with care • View on LinkedIn
-      </footer>
-    </main>
-  </div>
+  <footer>
+    © <span id="year"></span> Ahmed Nagi — All Rights Reserved
+  </footer>
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
-    // small enhancements could go here: theme toggle, animated skill bars, repo links
   </script>
 </body>
 </html>
